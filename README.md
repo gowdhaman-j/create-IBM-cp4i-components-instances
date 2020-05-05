@@ -140,3 +140,13 @@ This key will be used in the script (ibm_cloud_login_using_api_key.sh). Keep a n
 		
 		replace "PROVIDE_YOUR_OpenShift_Cluster_Name" with the OCP cluster name 
 
+
+## Create APIConnect Instance
+1. Open **create-apic-instance.sh** in Setup-APIConnect directory
+2. If you are will to change the below values, you can otherwise leave it to default
+```
+export NEW_NAMESPACE=z-apic
+export RELEASE_NAME-my-apic-01
+```
+3. Run the script 
+	./create-apic-instance.sh

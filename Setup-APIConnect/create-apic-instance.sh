@@ -14,7 +14,7 @@ export NEW_NAMESPACE=z-apic
 # Required Security contet constraints to create APIC
 export SCC=ibm-anyuid-hostpath-scc
 # Provide a meaning fullname for your release
-export RELEASE_NAME=my-apic-02
+export RELEASE_NAME=my-apic-01
 
 export CHART_FOLDER_NAME=ibm-apiconnect-icp4i-prod
 
