@@ -12,7 +12,6 @@ NC='\033[0m'
 export IBMCLOUD_API_KEY=PROVIDE_YOUR_IBM_Cloud_API_Key
 
 export CLOUD_ACCOUNT_ID=PROVIDE_YOUR_IBM_Cloud_Account_Id
-export REGION=PROVIDE_YOUR_Openshift_Cluster_Deployed_Region
 
 export CLUSTER_NAME=PROVIDE_YOUR_OpenShift_Cluster_Name
 
@@ -23,14 +22,13 @@ export CLUSTER_ID=''
 
 Check_IBM_Cloud_Login(){
 	CLOUD_ACCOUNT_ID=$1
-	REGION=$2
 	status=0
 
 	echo  "$YELLOW START: *************************************************** IBM Cloud Login ***************************************************$NC \n"
 		ibmcloud login \
 		-apikey $IBMCLOUD_API_KEY \
-		-c $CLOUD_ACCOUNT_ID \
-		-r $REGION \
+		-c $CLOUD_ACCOUNT_ID 
+		
 			
 		if [ $? -eq 0 ]; then
   			echo "$GREEN IBM Cloud login is successful!!!! $NC \n "
@@ -99,7 +97,7 @@ Set_Kube_Config(){
 }
 
 
-Check_IBM_Cloud_Login $CLOUD_ACCOUNT_ID $REGION
+Check_IBM_Cloud_Login $CLOUD_ACCOUNT_ID
 
 
 if [ $status -eq 0 ]; then

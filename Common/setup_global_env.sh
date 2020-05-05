@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # OpenShift Cluster Server URL.
-export OC_SERVER=PROVIDE_YOUR_OpenShift_API_Server_URL
+export OC_SERVER=PROVIDE_YOUR_OpenShift_Cluster_API_Server_URL
 
 # sub-domain of your OCP cluster
 export OCP_CLUSTER_SUBDOMAIN=PROVIDE_YOUR_OpenShift_Cluster_SubDomain
@@ -36,7 +36,7 @@ export CP4Integration_PASSWORD=admin
 #    Copy the entitlement key presented to a safe place for use later.
 
 # Set entitlement key as Docker password
-export DOCKER_PASSWORD="PROVIDE YOUR Entitlement key"
+export DOCKER_PASSWORD=PROVIDE_YOUR_Entitlement_Key
 
 #No need to chenge the Docker username 
 export DOCKER_USERNAME=cp
