@@ -5,7 +5,7 @@ Check_OC_Login(){
 	status=0
 
 	echo  "$YELLOW START: *************************************************** oc login Validation Check ***************************************************$NC \n"
-		echo $IBMCLOUD_API_KEY
+		
 		oc login -u apikey -p $IBMCLOUD_API_KEY --insecure-skip-tls-verify=true
 
 		if [ $? -eq 0 ]; then

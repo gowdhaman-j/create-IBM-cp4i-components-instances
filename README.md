@@ -143,10 +143,16 @@ This key will be used in the script (ibm_cloud_login_using_api_key.sh). Keep a n
 
 ## Create APIConnect Instance
 1. Open **create-apic-instance.sh** in Setup-APIConnect directory
-2. If you are will to change the below values, you can otherwise leave it to default
+2. If you woul like  to change the below values, you can otherwise leave it to default
 ```
 export NEW_NAMESPACE=z-apic
 export RELEASE_NAME-my-apic-01
 ```
-3. Run the script 
-	./create-apic-instance.sh
+3. Run the script in a dry-run mode to ensure everything is fine
+```
+	./create-apic-instance.sh dry-run
+```	
+4. Run the script in a run mode to create a helm release of APIConnect
+```
+	./create-apic-instance.sh run
+```	

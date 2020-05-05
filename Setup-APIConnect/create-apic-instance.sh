@@ -1,5 +1,16 @@
 #!/bin/sh
 
+input=$1
+
+case "$input" in
+   "dry-run") export RUN=dry-run
+   ;;
+   "run") export RUN=run
+   ;;
+   *) echo "either provide dry-run or run";
+	  exit 0
+esac
+
 # Ensure you login to IBM Cloud
 source ../IBM-Cloud-Access-Details/ibm_cloud_login_using_api_key.sh
 
@@ -108,13 +119,17 @@ fi
 
 if [ $status -eq 0 ]; then
 	echo " Preparing for creating helm release $RELEASE_NAME !!!!!! $NC \n\n\n"
-	# Remove the temproty file created by sed
-	rm $RELEASE_NAME-values.yaml-e
+	
 	ls $RELEASE_NAME-values.yaml
 
 	if [ $? -eq 0 ]; then
-		helm install --name $RELEASE_NAME -f $RELEASE_NAME-values.yaml ./$CHART_FOLDER_NAME/ --tls --debug  --dry-run &
-		status=0
+		if [ $RUN == 'dry-run']; then
+			helm install --name $RELEASE_NAME -f $RELEASE_NAME-values.yaml ./$CHART_FOLDER_NAME/ --tls --debug  --dry-run &
+			status=0
+		else
+			helm install --name $RELEASE_NAME -f $RELEASE_NAME-values.yaml ./$CHART_FOLDER_NAME/ --tls --debug &
+			status=0
+		fi	
 		exit 0
 	else
 		echo "$RED $RELEASE_NAME-values.yaml not found !!!!!! $NC \n\n\n"
