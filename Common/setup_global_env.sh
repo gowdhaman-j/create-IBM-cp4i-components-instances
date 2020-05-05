@@ -27,7 +27,7 @@ export HELM_TLS_SECRET_NAME=helm-tls-secret
 export CP4Integration_USERNAME=admin
 
 # CP4Integration Platform Passw0rd. The one you have provided during the installation of CP4Integration
-export CP4Integration_PASSWORD=admin
+export CP4Integration_PASSWORD=PROVIDE_YOUR_CP4I_Navigator_Password
 
 #The IBM Entitled Registry contains images for the Platform Navigator, Asset Repository and all of the component 
 # capabilities in IBM Cloud Pak for Integration. To use the IBM Entitled Registry, you must first obtain an Entitlement key. Take the following steps.

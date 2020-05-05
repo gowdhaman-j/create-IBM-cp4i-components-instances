@@ -94,6 +94,15 @@ This key will be used in the script (ibm_cloud_login_using_api_key.sh). Keep a n
 
 		replace "PROVIDE_YOUR_OpenShift_Cluster_SubDomain" with the **Ingress subdomain**
 
+
+	- For setting values for **CP4Integration_PASSWORD**
+		
+		For the below export variable	
+			* export CP4Integration_PASSWORD=PROVIDE_YOUR_CP4I_Navigator_Password
+
+		replace "PROVIDE_YOUR_OpenShift_Cluster_SubDomain" with the password you have provided during the CP$i installation
+
+
 	- For setting values for **DOCKER_PASSWORD** we need to get the IBM Entitled Registry key. 
 		
 		The IBM Entitled Registry contains images for the Platform Navigator, Asset Repository and all of the component 
