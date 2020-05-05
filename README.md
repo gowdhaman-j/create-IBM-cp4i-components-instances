@@ -98,9 +98,9 @@ This key will be used in the script (ibm_cloud_login_using_api_key.sh). Keep a n
 		
 		The IBM Entitled Registry contains images for the Platform Navigator, Asset Repository and all of the component 
 		capabilities in IBM Cloud Pak for Integration. To use the IBM Entitled Registry, you must first obtain an Entitlement key. Take the following steps.
-		#   Obtain an Entitlement key from https://myibm.ibm.com/products-services/containerlibrary (IBM Container Library). Click Get an entitlement key if you are not on the entitlement page.
-		#    Click IBM Cloud Pak for Integration.
-		#    Copy the entitlement key presented to a safe place for use later.
+		*   Obtain an Entitlement key from https://myibm.ibm.com/products-services/containerlibrary (IBM Container Library). Click Get an entitlement key if you are not on the entitlement page.
+		*    Click IBM Cloud Pak for Integration.
+		*    Copy the entitlement key presented to a safe place for use later.
 		
 
 		For the below export variable	
