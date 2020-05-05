@@ -75,7 +75,8 @@ This key will be used in the script (ibm_cloud_login_using_api_key.sh). Keep a n
 ## Get some of the Key information for the scripts
 
 - Key information for **./Common/setup_global_env.sh**
-	- For setting values for **OC_SERVER**
+	- For setting values for **OC_SERVER** 
+	
 		Log in to OpenShift Admin Console. From the Dashboard , Cluster API Address can be taken
 			  ![Fork Button Screenshot](imgs/cluster-api-address.png)
 		```For the below export variable	  
