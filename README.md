@@ -116,7 +116,7 @@ This key will be used in the script (ibm_cloud_login_using_api_key.sh). Keep a n
 		
 
 		For the below export variable	
-		
+
 			- export DOCKER_PASSWORD="PROVIDE_YOUR_Entitlement_Key"
 		
 		replace "PROVIDE_YOUR_Entitlement_Key" with the **Entitlement key** 
@@ -152,7 +152,7 @@ This key will be used in the script (ibm_cloud_login_using_api_key.sh). Keep a n
 
 		For the below export variable	  
 
-			- export **CLUSTER_NAME=PROVIDE_YOUR_OpenShift_Cluster_Name**
+			- export CLUSTER_NAME=PROVIDE_YOUR_OpenShift_Cluster_Name
 		
 		replace "PROVIDE_YOUR_OpenShift_Cluster_Name" with the OCP cluster name 
 
