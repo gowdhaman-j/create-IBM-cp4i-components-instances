@@ -81,7 +81,7 @@ This key will be used in the script (ibm_cloud_login_using_api_key.sh). Keep a n
 			  ![Fork Button Screenshot](imgs/cluster-api-address.png)
 
 		For the below export variable	  
-			* export OC_SERVER=PROVIDE_YOUR_OpenShift_Cluster_API_Server_URL
+			- export OC_SERVER=PROVIDE_YOUR_OpenShift_Cluster_API_Server_URL
 		
 		replace "PROVIDE_YOUR_OpenShift_Cluster_API_Server_URL" with the Cluster API URL Address 
 		  
@@ -90,7 +90,7 @@ This key will be used in the script (ibm_cloud_login_using_api_key.sh). Keep a n
 		Note down **Ingress subdomain** values from OCP Cluster Summary. Refer to section "Setting up the required CLI"
 
 		For the below export variable	
-			* export OCP_CLUSTER_SUBDOMAIN=PROVIDE_YOUR_OpenShift_Cluster_SubDomain
+			- export OCP_CLUSTER_SUBDOMAIN=PROVIDE_YOUR_OpenShift_Cluster_SubDomain
 
 		replace "PROVIDE_YOUR_OpenShift_Cluster_SubDomain" with the **Ingress subdomain**
 
@@ -98,7 +98,7 @@ This key will be used in the script (ibm_cloud_login_using_api_key.sh). Keep a n
 	- For setting values for **CP4Integration_PASSWORD**
 		
 		For the below export variable	
-			* export CP4Integration_PASSWORD=PROVIDE_YOUR_CP4I_Navigator_Password
+			- export CP4Integration_PASSWORD=PROVIDE_YOUR_CP4I_Navigator_Password
 
 		replace "PROVIDE_YOUR_OpenShift_Cluster_SubDomain" with the password you have provided during the CP$i installation
 
@@ -113,7 +113,7 @@ This key will be used in the script (ibm_cloud_login_using_api_key.sh). Keep a n
 		
 
 		For the below export variable	
-			* export DOCKER_PASSWORD="PROVIDE_YOUR_Entitlement_Key"
+			- export DOCKER_PASSWORD="PROVIDE_YOUR_Entitlement_Key"
 		
 		replace "PROVIDE_YOUR_Entitlement_Key" with the **Entitlement key** 
 
@@ -123,7 +123,7 @@ This key will be used in the script (ibm_cloud_login_using_api_key.sh). Keep a n
 	- For setting values for **IBMCLOUD_API_KEY**
 		
 		For the below export variable	  
-			* export IBMCLOUD_API_KEY=PROVIDE_YOUR_IBM_Cloud_API_Key
+			- export IBMCLOUD_API_KEY=PROVIDE_YOUR_IBM_Cloud_API_Key
 		
 		replace "PROVIDE_YOUR_IBM_Cloud_API_Key" with the API Key noted in the previous section **Get the API Key of your Cloud Account**
 
@@ -134,7 +134,7 @@ This key will be used in the script (ibm_cloud_login_using_api_key.sh). Keep a n
 			  ![Fork Button Screenshot](imgs/cloud-account-id.png)
 		
 		For the below export variable	  
-			* export CLOUD_ACCOUNT_ID=PROVIDE_YOUR_IBM_Cloud_Account_Id
+			- export CLOUD_ACCOUNT_ID=PROVIDE_YOUR_IBM_Cloud_Account_Id
 		
 		replace "PROVIDE_YOUR_OpenShift_Cluster_API_Server_URL" with the Account ID
 
@@ -145,7 +145,7 @@ This key will be used in the script (ibm_cloud_login_using_api_key.sh). Keep a n
 		Note down the name of the OCP cluster
 
 		For the below export variable	  
-			* export **CLUSTER_NAME=PROVIDE_YOUR_OpenShift_Cluster_Name**
+			- export **CLUSTER_NAME=PROVIDE_YOUR_OpenShift_Cluster_Name**
 		
 		replace "PROVIDE_YOUR_OpenShift_Cluster_Name" with the OCP cluster name 
 
