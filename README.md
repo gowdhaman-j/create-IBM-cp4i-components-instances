@@ -74,21 +74,21 @@ This key will be used in the script (ibm_cloud_login_using_api_key.sh). Keep a n
 
 ## Get some of the Key information for the scripts
 
-- Key information for ./Common/setup_global_env.sh
-	For setting values for **OC_SERVER**
+- Key information for **./Common/setup_global_env.sh**
+	- For setting values for **OC_SERVER**
 		Log in to OpenShift Admin Console. From the Dashboard , Cluster API Address can be taken
 			  ![Fork Button Screenshot](imgs/cluster-api-address.png)
-		For the below export variable	  
+		```For the below export variable	  
 			export OC_SERVER=PROVIDE_YOUR_OpenShift_Cluster_API_Server_URL
-		replace "PROVIDE_YOUR_OpenShift_Cluster_API_Server_URL" with the Cluster API URL Address
+		replace "PROVIDE_YOUR_OpenShift_Cluster_API_Server_URL" with the Cluster API URL Address```
 		  
-	For setting values for **OCP_CLUSTER_SUBDOMAIN**
-		Value of **Ingress subdomain** taken from OCP Cluster Summary. Refer to section ```Setting up the required CLI```
+	- For setting values for **OCP_CLUSTER_SUBDOMAIN**
+		```Value of **Ingress subdomain** taken from OCP Cluster Summary. Refer to section ```Setting up the required CLI``` ```
 		For the below export variable	
-			export OCP_CLUSTER_SUBDOMAIN=PROVIDE_YOUR_OpenShift_Cluster_SubDomain
+			- export OCP_CLUSTER_SUBDOMAIN=PROVIDE_YOUR_OpenShift_Cluster_SubDomain
 		replace "PROVIDE_YOUR_OpenShift_Cluster_SubDomain" with the **Ingress subdomain**
 
-	For setting values for **DOCKER_PASSWORD** we need to get the IBM Entitled Registry key. 
+	- For setting values for **DOCKER_PASSWORD** we need to get the IBM Entitled Registry key. 
 		```
 		The IBM Entitled Registry contains images for the Platform Navigator, Asset Repository and all of the component 
 		capabilities in IBM Cloud Pak for Integration. To use the IBM Entitled Registry, you must first obtain an Entitlement key. Take the following steps.
@@ -98,30 +98,30 @@ This key will be used in the script (ibm_cloud_login_using_api_key.sh). Keep a n
 		```
 
 		For the below export variable	
-			export DOCKER_PASSWORD="PROVIDE_YOUR_Entitlement_Key"
+			- export DOCKER_PASSWORD="PROVIDE_YOUR_Entitlement_Key"
 		replace "PROVIDE_YOUR_Entitlement_Key" with the **Entitlement key** 
 
 
 
 - Key information for **./IBM-Cloud-Access-Details/ibm_cloud_login_using_api_key.sh**
-	-- For setting values for **IBMCLOUD_API_KEY**
+	- For setting values for **IBMCLOUD_API_KEY**
 		For the below export variable	  
-			export IBMCLOUD_API_KEY=PROVIDE_YOUR_IBM_Cloud_API_Key
+			- export IBMCLOUD_API_KEY=PROVIDE_YOUR_IBM_Cloud_API_Key
 		replace "PROVIDE_YOUR_IBM_Cloud_API_Key" with the API Key noted in the previous section ```Get the API Key of your Cloud Account```
 
 
-	-- For setting values for **CLOUD_ACCOUNT_ID**
+	- For setting values for **CLOUD_ACCOUNT_ID**
 		Log in to IBM Cloud https://cloud.ibm.com/ Get the Account ID from Account Settings
 			  ![Fork Button Screenshot](imgs/cloud-account-id.png)
 		For the below export variable	  
-			export CLOUD_ACCOUNT_ID=PROVIDE_YOUR_IBM_Cloud_Account_Id
+			- export CLOUD_ACCOUNT_ID=PROVIDE_YOUR_IBM_Cloud_Account_Id
 		replace "PROVIDE_YOUR_OpenShift_Cluster_API_Server_URL" with the Account ID
 
 
-	-- For setting values for **CLUSTER_NAME**
+	- For setting values for **CLUSTER_NAME**
 		Navigate to page ```https://cloud.ibm.com/kubernetes/clusters``` where you have Cloud Pak for Integration cluster listed
 		Note down the name of the OCP cluster
 		For the below export variable	  
-			export CLUSTER_NAME=PROVIDE_YOUR_OpenShift_Cluster_Name
+			- export CLUSTER_NAME=PROVIDE_YOUR_OpenShift_Cluster_Name
 		replace "PROVIDE_YOUR_OpenShift_Cluster_Name" with the OCP cluster name 
 
