@@ -76,17 +76,22 @@ This key will be used in the script (ibm_cloud_login_using_api_key.sh). Keep a n
 
 - Key information for **./Common/setup_global_env.sh**
 	- For setting values for **OC_SERVER** 
-	
+
 		Log in to OpenShift Admin Console. From the Dashboard , Cluster API Address can be taken
 			  ![Fork Button Screenshot](imgs/cluster-api-address.png)
-		```For the below export variable	  
+		For the below export variable	  
+
 			export OC_SERVER=PROVIDE_YOUR_OpenShift_Cluster_API_Server_URL
-		replace "PROVIDE_YOUR_OpenShift_Cluster_API_Server_URL" with the Cluster API URL Address```
+
+		replace "PROVIDE_YOUR_OpenShift_Cluster_API_Server_URL" with the Cluster API URL Address
 		  
 	- For setting values for **OCP_CLUSTER_SUBDOMAIN**
-		```Value of **Ingress subdomain** taken from OCP Cluster Summary. Refer to section ```Setting up the required CLI``` ```
+
+		```Value of **Ingress subdomain** taken from OCP Cluster Summary. Refer to section "Setting up the required CLI" ```
+
 		For the below export variable	
 			- export OCP_CLUSTER_SUBDOMAIN=PROVIDE_YOUR_OpenShift_Cluster_SubDomain
+
 		replace "PROVIDE_YOUR_OpenShift_Cluster_SubDomain" with the **Ingress subdomain**
 
 	- For setting values for **DOCKER_PASSWORD** we need to get the IBM Entitled Registry key. 
