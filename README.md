@@ -79,17 +79,17 @@ This key will be used in the script (ibm_cloud_login_using_api_key.sh). Keep a n
 
 		Log in to OpenShift Admin Console. From the Dashboard , Cluster API Address can be taken
 			  ![Fork Button Screenshot](imgs/cluster-api-address.png)
-		For the below export variable	  
 
+		```For the below export variable	  
 			export OC_SERVER=PROVIDE_YOUR_OpenShift_Cluster_API_Server_URL
-
-		replace "PROVIDE_YOUR_OpenShift_Cluster_API_Server_URL" with the Cluster API URL Address
+		replace "PROVIDE_YOUR_OpenShift_Cluster_API_Server_URL" with the Cluster API URL Address```
 		  
 	- For setting values for **OCP_CLUSTER_SUBDOMAIN**
 
 		```Value of **Ingress subdomain** taken from OCP Cluster Summary. Refer to section "Setting up the required CLI" ```
 
 		For the below export variable	
+
 			- export OCP_CLUSTER_SUBDOMAIN=PROVIDE_YOUR_OpenShift_Cluster_SubDomain
 
 		replace "PROVIDE_YOUR_OpenShift_Cluster_SubDomain" with the **Ingress subdomain**
@@ -111,12 +111,14 @@ This key will be used in the script (ibm_cloud_login_using_api_key.sh). Keep a n
 
 - Key information for **./IBM-Cloud-Access-Details/ibm_cloud_login_using_api_key.sh**
 	- For setting values for **IBMCLOUD_API_KEY**
+		
 		For the below export variable	  
 			- export IBMCLOUD_API_KEY=PROVIDE_YOUR_IBM_Cloud_API_Key
 		replace "PROVIDE_YOUR_IBM_Cloud_API_Key" with the API Key noted in the previous section ```Get the API Key of your Cloud Account```
 
 
 	- For setting values for **CLOUD_ACCOUNT_ID**
+		
 		Log in to IBM Cloud https://cloud.ibm.com/ Get the Account ID from Account Settings
 			  ![Fork Button Screenshot](imgs/cloud-account-id.png)
 		For the below export variable	  
@@ -125,9 +127,10 @@ This key will be used in the script (ibm_cloud_login_using_api_key.sh). Keep a n
 
 
 	- For setting values for **CLUSTER_NAME**
-		Navigate to page ```https://cloud.ibm.com/kubernetes/clusters``` where you have Cloud Pak for Integration cluster listed
+		
+		Navigate to page ```https://cloud.ibm.com/kubernetes/clusters``` where you have Cloud Pak for Integration cluster listed.
 		Note down the name of the OCP cluster
 		For the below export variable	  
-			- export CLUSTER_NAME=PROVIDE_YOUR_OpenShift_Cluster_Name
+			- export **CLUSTER_NAME=PROVIDE_YOUR_OpenShift_Cluster_Name**
 		replace "PROVIDE_YOUR_OpenShift_Cluster_Name" with the OCP cluster name 
 
