@@ -7,7 +7,7 @@ case "$input" in
    ;;
    "run") export RUN=run
    ;;
-   *) echo "either provide dry-run or run";
+   *) echo "Invalid Input!!! pls provide dry-run or run";
 	  exit 0
 esac
 
