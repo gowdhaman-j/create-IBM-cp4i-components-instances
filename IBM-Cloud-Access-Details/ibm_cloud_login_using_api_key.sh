@@ -81,8 +81,7 @@ Set_Kube_Config(){
 	
 	ibmcloud oc cluster config -c $CLUSTER_ID 
 	#This Command will provide you the export command to set
-	KUBE_CONFIG=`ibmcloud oc cluster config -c $CLUSTER_ID --export | grep KUBECONFIG`
-
+	KUBE_CONFIG=`ibmcloud oc cluster config -c $CLUSTER_ID  | grep KUBECONFIG`
 
 	
 	if [ $? -eq 0 ]; then
