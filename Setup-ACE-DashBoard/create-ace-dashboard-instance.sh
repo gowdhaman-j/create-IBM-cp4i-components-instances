@@ -115,14 +115,15 @@ fi
 
 if [ $status -eq 0 ]; then
 	echo " Preparing for creating helm release $RELEASE_NAME !!!!!! $NC \n\n\n"
-	
 	ls $RELEASE_NAME-values.yaml
 
 	if [ $? -eq 0 ]; then
-		if [ $RUN == 'dry-run' ]; then
+		if [ $input == "dry-run" ]; then
+			echo 'dry-run >>>>>>>'
 			helm install --name $RELEASE_NAME -f $RELEASE_NAME-values.yaml ./$CHART_FOLDER_NAME/ --tls --debug  --dry-run &
 			status=0
 		else
+			echo 'run >>>>>>>'
 			helm install --name $RELEASE_NAME -f $RELEASE_NAME-values.yaml ./$CHART_FOLDER_NAME/ --tls --debug &
 			status=0
 		fi	

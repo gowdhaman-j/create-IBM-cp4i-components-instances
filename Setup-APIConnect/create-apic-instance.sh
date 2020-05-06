@@ -130,7 +130,7 @@ if [ $status -eq 0 ]; then
 			status=0
 		else
 			echo 'run >>>>>>>'
-			helm install --name $RELEASE_NAME -f $RELEASE_NAME-values.yaml ./$CHART_FOLDER_NAME/ --tls --debug &
+			helm install --name $RELEASE_NAME -f $RELEASE_NAME-values.yaml ./$CHART_FOLDER_NAME/ --tls --debug  &
 			status=0
 		fi	
 		exit 0
