@@ -120,7 +120,7 @@ if [ $status -eq 0 ]; then
 	ls $RELEASE_NAME-values.yaml
 
 	if [ $? -eq 0 ]; then
-		if [ $RUN == 'dry-run']; then
+		if [ $RUN == 'dry-run' ]; then
 			helm install --name $RELEASE_NAME -f $RELEASE_NAME-values.yaml ./$CHART_FOLDER_NAME/ --tls --debug  --dry-run &
 			status=0
 		else

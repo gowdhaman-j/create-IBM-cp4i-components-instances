@@ -1,5 +1,6 @@
 #!/bin/sh
 
+
 input=$1
 
 case "$input" in
@@ -7,9 +8,10 @@ case "$input" in
    ;;
    "run") export RUN=run
    ;;
-   *) echo "either provide dry-run or run";
+   *) echo "Invalid Input!!! pls provide dry-run or run";
 	  exit 0
 esac
+
 
 # Ensure you login to IBM Cloud
 source ../IBM-Cloud-Access-Details/ibm_cloud_login_using_api_key.sh
@@ -119,15 +121,16 @@ fi
 
 if [ $status -eq 0 ]; then
 	echo " Preparing for creating helm release $RELEASE_NAME !!!!!! $NC \n\n\n"
-	
 	ls $RELEASE_NAME-values.yaml
 
 	if [ $? -eq 0 ]; then
-		if [ $RUN == 'dry-run']; then
-			helm install --name $RELEASE_NAME -f $RELEASE_NAME-values.yaml ./$CHART_FOLDER_NAME/ --tls --debug  --dry-run &
+		if [ $input == "dry-run" ]; then
+			echo 'dry-run >>>>>>>'
+			#helm install --name $RELEASE_NAME -f $RELEASE_NAME-values.yaml ./$CHART_FOLDER_NAME/ --tls --debug  --dry-run &
 			status=0
 		else
-			helm install --name $RELEASE_NAME -f $RELEASE_NAME-values.yaml ./$CHART_FOLDER_NAME/ --tls --debug &
+			echo 'run >>>>>>>'
+			#helm install --name $RELEASE_NAME -f $RELEASE_NAME-values.yaml ./$CHART_FOLDER_NAME/ --tls --debug --dry-run &
 			status=0
 		fi	
 		exit 0
