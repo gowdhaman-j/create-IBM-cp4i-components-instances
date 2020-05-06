@@ -5,9 +5,8 @@ The asset provided here will help you to create the instance or helm rleases of
 - App Connect Designer
 - MQ
 - DataPower
-- EventStreams
-	- Stateless
-	- Statefull
+- EventStreams - Stateless
+- EventStreams - Statefull 
 - AssetRepository
 - Tracing
 
@@ -162,7 +161,7 @@ This key will be used in the script (ibm_cloud_login_using_api_key.sh). Keep a n
 2. If you woul like  to change the below values, you can otherwise leave it to default
 ```
 export NEW_NAMESPACE=z-apic
-export RELEASE_NAME-my-apic-01
+export RELEASE_NAME=my-apic-01
 ```
 3. Run the script in a dry-run mode to ensure everything is fine
 ```
@@ -172,3 +171,38 @@ export RELEASE_NAME-my-apic-01
 ```
 	./create-apic-instance.sh run
 ```	
+
+## Create ACE Dashboard Instance
+1. Open **create-ace-dashboard-instance.sh** in Setup-ACE-DashBoard directory
+2. If you woul like  to change the below values, you can otherwise leave it to default
+```
+export NEW_NAMESPACE=z-ace
+export RELEASE_NAME=my-ace-dashboard
+```
+3. Run the script in a dry-run mode to ensure everything is fine
+```
+	./create-ace-dashboard-instance.sh dry-run
+```	
+4. Run the script in a run mode to create a helm release of APIConnect
+```
+	./create-ace-dashboard-instance.sh run
+```	
+
+
+## Create MQ Instance ( Single Reselient QM)
+1. Open **create-single-reselient-qm.sh** in Setup-SingleReselientQM directory
+2. If you woul like  to change the below values, you can otherwise leave it to default
+```
+export NEW_NAMESPACE=z-mq
+export RELEASE_NAME=single-reselient-qm1
+```
+3. Run the script in a dry-run mode to ensure everything is fine
+```
+	./create-single-reselient-qm.sh dry-run
+```	
+4. Run the script in a run mode to create a helm release of APIConnect
+```
+	./create-single-reselient-qm.sh run
+```	
+
+
