@@ -183,7 +183,7 @@ export RELEASE_NAME=my-ace-dashboard
 ```
 	./create-ace-dashboard-instance.sh dry-run
 ```	
-4. Run the script in a run mode to create a helm release of APIConnect
+4. Run the script in a run mode to create a helm release of ACE DashBoard
 ```
 	./create-ace-dashboard-instance.sh run
 ```	
@@ -199,7 +199,7 @@ export RELEASE_NAME=my-app-connect-designer
 ```
 	./create-ace-designer-instance.sh dry-run
 ```	
-4. Run the script in a run mode to create a helm release of APIConnect
+4. Run the script in a run mode to create a helm release of App Connect Designer
 ```
 	./create-ace-designer-instance.sh run
 ```	
@@ -215,9 +215,25 @@ export RELEASE_NAME=my-asset-repo
 ```
 	./create-asset-repository-instance.sh dry-run
 ```	
-4. Run the script in a run mode to create a helm release of APIConnect
+4. Run the script in a run mode to create a helm release of AssetRepository
 ```
 	./create-asset-repository-instance.sh run
+```	
+
+## Create DataPower Instance 
+1. Open **create-datapower-instance.sh** in Setup-Datapower directory
+2. If you would like to change the below values, you can otherwise leave it to default
+```
+export NEW_NAMESPACE=z-datapower
+export RELEASE_NAME=my-datapower
+```
+3. Run the script in a dry-run mode to ensure everything is fine
+```
+	./create-datapower-instance.sh dry-run
+```	
+4. Run the script in a run mode to create a helm release of DataPower
+```
+	./create-datapower-instance.sh run
 ```	
 
 ## Create EventStreams (Stateless) Instance 
@@ -231,7 +247,7 @@ export RELEASE_NAME=my-stateless-es
 ```
 	./create-stateless-es-instance.sh dry-run
 ```	
-4. Run the script in a run mode to create a helm release of APIConnect
+4. Run the script in a run mode to create a helm release of Stateless EventStream
 ```
 	./create-stateless-es-instance.sh run
 ```	
@@ -247,7 +263,7 @@ export RELEASE_NAME=single-reselient-qm1
 ```
 	./create-single-reselient-qm.sh dry-run
 ```	
-4. Run the script in a run mode to create a helm release of APIConnect
+4. Run the script in a run mode to create a helm release of Single Resilient Queue Manager
 ```
 	./create-single-reselient-qm.sh run
 ```	
