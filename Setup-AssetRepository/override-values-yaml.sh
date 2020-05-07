@@ -1,30 +1,27 @@
 #!/bin/sh
 
 
-# License to set
-export MY_license=accept
 
 export MY_pullSecret=$PULL_SECRET_NAME
-
-export MY_helmTlsSecret=$HELM_TLS_SECRET_NAME
-
-export MY_productionDeployment=false
-
-#DO NOT need to change this value if it is for Dev env
-export MY_global_replicaCount=1
-
-# For development mode. Set the Storage class
-export MY_storageClassName=ibmc-file-silver
+export MY_redis-ha_replica_servers=1
+export MY_redis-ha_replica_sentinels=1
+export MY_assetSync_storageClassName=ibmc-file-silver
+export MY_assetSync_replicas=1
+export MY_assetUI_replicas=1
+export MY_couchdb_replicas=1
+export MY_couchdb_storageClass=ibmc-block-silver
 
 
 ############ Let us find & Replace the $RELEASE_NAME-values.yaml
 
-sed -i -e 's, MY_license, '$MY_license',g' $RELEASE_NAME-values.yaml
 sed -i -e 's, MY_pullSecret, '$MY_pullSecret',g' $RELEASE_NAME-values.yaml
-sed -i -e 's, MY_helmTlsSecret, '$MY_helmTlsSecret',g' $RELEASE_NAME-values.yaml
-sed -i -e 's, MY_productionDeployment, '$MY_productionDeployment',g' $RELEASE_NAME-values.yaml
-sed -i -e 's, MY_global_replicaCount, '$MY_global_replicaCount',g' $RELEASE_NAME-values.yaml
-sed -i -e 's, MY_storageClassName, '$MY_storageClassName',g' $RELEASE_NAME-values.yaml
+sed -i -e 's, MY_redis-ha_replica_servers, '$MY_redis-ha_replica_servers',g' $RELEASE_NAME-values.yaml
+sed -i -e 's, MY_redis-ha_replica_sentinels, '$MY_redis-ha_replica_sentinels',g' $RELEASE_NAME-values.yaml
+sed -i -e 's, MY_assetSync_storageClassName, '$MY_assetSync_storageClassName',g' $RELEASE_NAME-values.yaml
+sed -i -e 's, MY_assetSync_replicas, '$MY_assetSync_replicas',g' $RELEASE_NAME-values.yaml
+sed -i -e 's, MY_assetUI_replicas, '$MY_assetUI_replicas',g' $RELEASE_NAME-values.yaml
+sed -i -e 's, MY_couchdb_replicas, '$MY_couchdb_replicas',g' $RELEASE_NAME-values.yaml
+sed -i -e 's, MY_couchdb_storageClass, '$MY_couchdb_storageClass',g' $RELEASE_NAME-values.yaml
 
 
 
