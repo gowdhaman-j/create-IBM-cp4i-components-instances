@@ -268,4 +268,20 @@ export RELEASE_NAME=single-reselient-qm1
 	./create-single-reselient-qm.sh run
 ```	
  
+ ## Create Tracing Instance 
+1. Open **create-tracing-instance.sh** in Setup-Tracing directory
+2. If you would like to change the below values, you can otherwise leave it to default
+```
+export NEW_NAMESPACE=z-tracing
+export RELEASE_NAME=my-tracing
+```
+3. Run the script in a dry-run mode to ensure everything is fine
+```
+	./create-tracing-instance.sh dry-run
+```	
+4. Run the script in a run mode to create a helm release of Tracing
+```
+	./create-tracing-instance.sh run
+```	
+
 
