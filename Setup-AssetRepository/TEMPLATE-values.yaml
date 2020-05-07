@@ -32,9 +32,9 @@ prereqs:
     enabled: true
     replicas:
       #Gowtham it was 3, changed to 1 
-      servers: MY_redis-ha_replica_servers
+      servers: MY_redis_ha_replica_servers
       #Gowtham it was 3, changed to 1 
-      sentinels: MY_redis-ha_replica_sentinels
+      sentinels: MY_redis_ha_replica_sentinels
 
 assetSync:
   # Gowtham this should be RWX - ibmc-file-silver

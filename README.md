@@ -158,7 +158,7 @@ This key will be used in the script (ibm_cloud_login_using_api_key.sh). Keep a n
 
 ## Create APIConnect Instance
 1. Open **create-apic-instance.sh** in Setup-APIConnect directory
-2. If you woul like  to change the below values, you can otherwise leave it to default
+2. If you would like  to change the below values, you can otherwise leave it to default
 ```
 export NEW_NAMESPACE=z-apic
 export RELEASE_NAME=my-apic-01
@@ -174,7 +174,7 @@ export RELEASE_NAME=my-apic-01
 
 ## Create ACE Dashboard Instance
 1. Open **create-ace-dashboard-instance.sh** in Setup-ACE-DashBoard directory
-2. If you woul like  to change the below values, you can otherwise leave it to default
+2. If you would like to change the below values, you can otherwise leave it to default
 ```
 export NEW_NAMESPACE=z-ace
 export RELEASE_NAME=my-ace-dashboard
@@ -188,10 +188,57 @@ export RELEASE_NAME=my-ace-dashboard
 	./create-ace-dashboard-instance.sh run
 ```	
 
+## Create App Connect Designer Instance 
+1. Open **create-ace-designer-instance.sh** in Setup-AppConect-Designer directory
+2. If you would like to change the below values, you can otherwise leave it to default
+```
+export NEW_NAMESPACE=z-ace-designer
+export RELEASE_NAME=my-app-connect-designer
+```
+3. Run the script in a dry-run mode to ensure everything is fine
+```
+	./create-ace-designer-instance.sh dry-run
+```	
+4. Run the script in a run mode to create a helm release of APIConnect
+```
+	./create-ace-designer-instance.sh run
+```	
+ 
+## Create AssetRepo Instance 
+1. Open **create-asset-repository-instance.sh** in Setup-AssetRepository directory
+2. If you would like to change the below values, you can otherwise leave it to default
+```
+export NEW_NAMESPACE=z-assetrepo
+export RELEASE_NAME=my-asset-repo
+```
+3. Run the script in a dry-run mode to ensure everything is fine
+```
+	./create-asset-repository-instance.sh dry-run
+```	
+4. Run the script in a run mode to create a helm release of APIConnect
+```
+	./create-asset-repository-instance.sh run
+```	
+
+## Create EventStreams (Stateless) Instance 
+1. Open **create-stateless-es-instance.sh** in Setup-EventStreams/Setup-Stateless-ES directory
+2. If you would like to change the below values, you can otherwise leave it to default
+```
+export NEW_NAMESPACE=z-eventstreams
+export RELEASE_NAME=my-stateless-es
+```
+3. Run the script in a dry-run mode to ensure everything is fine
+```
+	./create-stateless-es-instance.sh dry-run
+```	
+4. Run the script in a run mode to create a helm release of APIConnect
+```
+	./create-stateless-es-instance.sh run
+```	
 
 ## Create MQ Instance ( Single Reselient QM)
 1. Open **create-single-reselient-qm.sh** in Setup-SingleReselientQM directory
-2. If you woul like  to change the below values, you can otherwise leave it to default
+2. If you would like to change the below values, you can otherwise leave it to default
 ```
 export NEW_NAMESPACE=z-mq
 export RELEASE_NAME=single-reselient-qm1
