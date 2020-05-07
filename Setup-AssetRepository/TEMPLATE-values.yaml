@@ -1,0 +1,65 @@
+###############################################################################
+#  Licensed Materials - Property of IBM
+#
+# 5737-I89
+# © Copyright IBM Corp. 2019 All Rights Reserved
+# US Government Users Restricted Rights - Use, duplication or
+# disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+###############################################################################
+
+# Default values for ibm-icp4i-asset-repo-prod.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+global:
+  images:
+    #Gowtham: provided the pull secret 
+    pullSecret: MY_pullSecret
+    
+    registry: cp.icr.io/cp/icp4i/
+    pullPolicy: IfNotPresent
+    redis: wdp-redis:0.0.4-icp4i
+    couchdb: couchdb:3.0.0-864c4c6d8b62
+    assetSync: icip-asset-sync:3.1.0-2020-03-12-1002-d1e8e53a
+    assetUI: icp4i-asset-repo-ui:3.1.0-2020-03-11-1440-6203520c
+    configurator: icip-configurator:3.1.0-2020-03-06-1514-0634b1ea
+  initVolumeAsRoot: true
+  icp4iNamespace: integration
+
+arch: amd64
+
+prereqs:
+  redis-ha:
+    enabled: true
+    replicas:
+      #Gowtham it was 3, changed to 1 
+      servers: MY_redis-ha_replica_servers
+      #Gowtham it was 3, changed to 1 
+      sentinels: MY_redis-ha_replica_sentinels
+
+assetSync:
+  # Gowtham this should be RWX - ibmc-file-silver
+  storageClassName: MY_assetSync_storageClassName
+  storage: 2Gi
+  #Gowtham it was 3, changed to 1 
+  replicas: MY_assetSync_replicas
+
+assetUI:
+  #Gowtham it was 3, changed to 1 
+  replicas: MY_assetUI_replicas
+
+couchdb:
+  #Gowtham it was 3, changed to 1 
+  replicas: MY_couchdb_replicas
+  persistentVolume:
+    size: 1Gi
+    # Gowtham this should be RWO - ibmc-block-silver
+    storageClass: MY_couchdb_storageClass
+  resources:
+    requests:
+      cpu: 500m
+      memory: 512Mi
+    limits:
+      cpu: 1000m
+      memory: 1024Mi
+  dns:
+    clusterDomainSuffix: cluster.local
