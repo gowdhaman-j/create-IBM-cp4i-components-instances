@@ -116,7 +116,7 @@ Execute_Cloudctl_Login(){
 	cloudctl login \
 		-a https://$ICP_CONSOLE_HOSTNAME \
 		-u $CP4Integration_USERNAME \
-		-p $CP4Integration_USERNAME \
+		-p $CP4Integration_PASSWORD \
 		-n $NEW_NAMESPACE
 
 		if [ $? -eq 0 ]; then
