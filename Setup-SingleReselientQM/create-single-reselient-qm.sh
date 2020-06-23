@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 input=$1
 
@@ -29,7 +29,7 @@ export CHART_FOLDER_NAME=ibm-mqadvanced-server-integration-prod
 
 
 #Set the Some Common functions
-source ../common/common_functions.sh
+source ../Common/common_functions.sh
 
 
 

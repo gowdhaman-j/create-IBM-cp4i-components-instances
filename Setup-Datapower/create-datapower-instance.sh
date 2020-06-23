@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 input=$1
 
@@ -30,7 +30,7 @@ export CHART_FOLDER_NAME=ibm-datapower-icp4i
 
 
 #Set the Some Common functions
-source ../common/common_functions.sh
+source ../Common/common_functions.sh
 
 
 if [ $? -eq 0 ]; then

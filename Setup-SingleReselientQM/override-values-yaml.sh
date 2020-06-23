@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #accept the licesne
 export MY_license=accept

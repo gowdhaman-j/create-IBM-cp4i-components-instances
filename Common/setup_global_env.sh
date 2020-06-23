@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # OpenShift Cluster Server URL.
 export OC_SERVER=PROVIDE_YOUR_OpenShift_Cluster_API_Server_URL

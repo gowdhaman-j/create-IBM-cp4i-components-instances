@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 
 # In case of dev environement License to set Nonproduction

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 input=$1
 
@@ -16,7 +16,7 @@ esac
 source ../IBM-Cloud-Access-Details/ibm_cloud_login_using_api_key.sh
 
 #Set the Some Common global Env 
-source ../common/setup_global_env.sh
+source ../Common/setup_global_env.sh
 
 
 # Name of the namespace you want to create an APP Connect Enterprise Dashboard instance.Avoid using OOB 'ace' namesapce.
@@ -30,7 +30,7 @@ export CHART_FOLDER_NAME=ibm-ace-dashboard-icp4i-prod
 
 
 #Set the Some Common functions
-source ../common/common_functions.sh
+source ../Common/common_functions.sh
 
 
 if [ $? -eq 0 ]; then

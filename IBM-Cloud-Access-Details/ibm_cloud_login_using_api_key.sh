@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # This will help you to display the output of the script in an appropriate color based on Success & Faulure
 RED='\033[0;31m'

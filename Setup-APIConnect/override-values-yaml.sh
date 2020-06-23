@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 
 # For Dev env set this to false.
