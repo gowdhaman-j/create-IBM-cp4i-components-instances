@@ -13,7 +13,7 @@ export ICP_CONSOLE_HOSTNAME=icp-console.$OCP_CLUSTER_SUBDOMAIN
 export ICP_PROXY_HOSTNAME=icp-proxy.$OCP_CLUSTER_SUBDOMAIN
 
 #CP4I Navigator Hostname
-export CP4I_NAVIGATOR_HOSTNAME=ibm-icp4i-prod-integration.$OCP_CLUSTER_SUBDOMAIN
+export CP4I_NAVIGATOR_HOSTNAME=navigator-integration.$OCP_CLUSTER_SUBDOMAIN
 
 
 #Image Pull Secret to be used in all helm releases
